@@ -13,9 +13,11 @@
 #include <sbi_utils/timer/fdt_timer.h>
 
 extern struct fdt_timer fdt_timer_mtimer;
+extern struct fdt_timer fdt_timer_cycle_timer;
 
 static struct fdt_timer *timer_drivers[] = {
-	&fdt_timer_mtimer
+	&fdt_timer_mtimer,
+	&fdt_timer_cycle_timer,
 };
 
 static struct fdt_timer dummy = {
